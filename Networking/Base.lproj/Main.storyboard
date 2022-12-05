@@ -17,37 +17,51 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Czr-ht-h6J">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5hz-MZ-exs" userLabel="Get Image Button">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="getImagePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h5Q-jO-Mcw"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Download an Image" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISC-Cc-iCc">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="45"/>
                                 <color key="textColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="FFK-kr-1kj">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ISC-Cc-iCc" firstAttribute="leading" secondItem="Czr-ht-h6J" secondAttribute="leading" id="0UG-iE-7BW"/>
                             <constraint firstItem="Czr-ht-h6J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7er-RN-Odh"/>
-                            <constraint firstItem="ISC-Cc-iCc" firstAttribute="leading" secondItem="5hz-MZ-exs" secondAttribute="leading" id="D0C-qw-kPS"/>
-                            <constraint firstItem="5hz-MZ-exs" firstAttribute="bottom" secondItem="Czr-ht-h6J" secondAttribute="bottom" id="KoI-EE-t3s"/>
-                            <constraint firstItem="ISC-Cc-iCc" firstAttribute="top" secondItem="5hz-MZ-exs" secondAttribute="top" id="UT3-ch-ZXA"/>
-                            <constraint firstItem="Czr-ht-h6J" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fwg-HA-Kcb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Czr-ht-h6J" secondAttribute="bottom" id="mkQ-Gx-XHQ"/>
-                            <constraint firstItem="5hz-MZ-exs" firstAttribute="top" secondItem="Czr-ht-h6J" secondAttribute="top" id="rku-EF-3A3"/>
-                            <constraint firstItem="ISC-Cc-iCc" firstAttribute="trailing" secondItem="5hz-MZ-exs" secondAttribute="trailing" id="sAa-63-PlG"/>
-                            <constraint firstItem="ISC-Cc-iCc" firstAttribute="bottom" secondItem="5hz-MZ-exs" secondAttribute="bottom" id="sx4-D4-vbU"/>
-                            <constraint firstItem="5hz-MZ-exs" firstAttribute="leading" secondItem="Czr-ht-h6J" secondAttribute="leading" id="tE4-3J-s6H"/>
-                            <constraint firstItem="5hz-MZ-exs" firstAttribute="trailing" secondItem="Czr-ht-h6J" secondAttribute="trailing" id="u7L-2J-Ml5"/>
+                            <constraint firstItem="ISC-Cc-iCc" firstAttribute="trailing" secondItem="Czr-ht-h6J" secondAttribute="trailing" id="7fl-Mk-2sF"/>
+                            <constraint firstItem="5hz-MZ-exs" firstAttribute="leading" secondItem="Czr-ht-h6J" secondAttribute="leading" id="9Kp-uI-x0O"/>
+                            <constraint firstItem="FFK-kr-1kj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DjW-uZ-xdH"/>
+                            <constraint firstItem="5hz-MZ-exs" firstAttribute="trailing" secondItem="Czr-ht-h6J" secondAttribute="trailing" id="N7C-Rs-SS0"/>
+                            <constraint firstItem="5hz-MZ-exs" firstAttribute="bottom" secondItem="Czr-ht-h6J" secondAttribute="bottom" id="cYD-Bo-rKO"/>
+                            <constraint firstItem="ISC-Cc-iCc" firstAttribute="top" secondItem="Czr-ht-h6J" secondAttribute="top" id="iB6-Vm-ERG"/>
+                            <constraint firstItem="ISC-Cc-iCc" firstAttribute="bottom" secondItem="Czr-ht-h6J" secondAttribute="bottom" id="mAW-cG-LKn"/>
+                            <constraint firstAttribute="bottom" secondItem="Czr-ht-h6J" secondAttribute="bottom" id="mkQ-Gx-XHQ"/>
+                            <constraint firstItem="FFK-kr-1kj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="p9B-bx-Nle"/>
+                            <constraint firstItem="5hz-MZ-exs" firstAttribute="top" secondItem="Czr-ht-h6J" secondAttribute="top" id="qLg-kH-WlV"/>
+                            <constraint firstItem="Czr-ht-h6J" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="wAM-Jt-sVR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Czr-ht-h6J" secondAttribute="trailing" id="xIh-xv-wTU"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="FFK-kr-1kj" id="eX1-er-Ccd"/>
+                        <outlet property="getImageButton" destination="5hz-MZ-exs" id="6Uo-qj-dV7"/>
+                        <outlet property="imageView" destination="Czr-ht-h6J" id="K9I-YT-ybx"/>
+                        <outlet property="label" destination="ISC-Cc-iCc" id="Oha-sW-XrG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
