@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYj-D5-QxE">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -9,9 +9,79 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="X0q-Eq-k9q">
+            <objects>
+                <viewController id="cLf-hU-EwI" customClass="ViewController" customModule="Networking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IVh-0K-SaS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8eO-c9-NE8">
+                                <rect key="frame" x="32" y="88" width="350" height="150"/>
+                                <color key="backgroundColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="WN7-Gs-ake"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Press to Download Image">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                                    <color key="baseForegroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Ttp-Zu-saL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8HC-cg-czt">
+                                <rect key="frame" x="32" y="452" width="350" height="150"/>
+                                <color key="backgroundColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="POST">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                                    <color key="baseForegroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="postRequest:" destination="cLf-hU-EwI" eventType="touchUpInside" id="5SA-65-2vZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQF-c5-L2n">
+                                <rect key="frame" x="32" y="270" width="350" height="150"/>
+                                <color key="backgroundColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="GET">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                                    <color key="baseForegroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="getRequest:" destination="cLf-hU-EwI" eventType="touchUpInside" id="2yt-Vs-dLy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Nbf-0E-tPv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FQF-c5-L2n" firstAttribute="leading" secondItem="8eO-c9-NE8" secondAttribute="leading" id="0Rh-dl-OZn"/>
+                            <constraint firstItem="8eO-c9-NE8" firstAttribute="top" secondItem="Nbf-0E-tPv" secondAttribute="top" id="27a-fa-1ZO"/>
+                            <constraint firstItem="8HC-cg-czt" firstAttribute="top" secondItem="FQF-c5-L2n" secondAttribute="bottom" constant="32" id="7dE-M3-457"/>
+                            <constraint firstItem="8HC-cg-czt" firstAttribute="trailing" secondItem="FQF-c5-L2n" secondAttribute="trailing" id="7nN-Wh-ASb"/>
+                            <constraint firstItem="8HC-cg-czt" firstAttribute="height" secondItem="FQF-c5-L2n" secondAttribute="height" id="7xi-v2-7ui"/>
+                            <constraint firstItem="FQF-c5-L2n" firstAttribute="trailing" secondItem="8eO-c9-NE8" secondAttribute="trailing" id="I5Q-ya-lMQ"/>
+                            <constraint firstItem="8eO-c9-NE8" firstAttribute="leading" secondItem="Nbf-0E-tPv" secondAttribute="leading" constant="32" id="RcE-dA-Rza"/>
+                            <constraint firstItem="8HC-cg-czt" firstAttribute="leading" secondItem="FQF-c5-L2n" secondAttribute="leading" id="p4W-i9-PRr"/>
+                            <constraint firstItem="Nbf-0E-tPv" firstAttribute="trailing" secondItem="8eO-c9-NE8" secondAttribute="trailing" constant="32" id="szj-1U-2ei"/>
+                            <constraint firstItem="FQF-c5-L2n" firstAttribute="height" secondItem="8eO-c9-NE8" secondAttribute="height" id="uug-9c-Plz"/>
+                            <constraint firstItem="FQF-c5-L2n" firstAttribute="top" secondItem="8eO-c9-NE8" secondAttribute="bottom" constant="32" id="w5z-YS-3s2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Um8-Bd-YtY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Zv-Ci-kdy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="191" y="110"/>
+        </scene>
+        <!--Image View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Networking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ImageViewController" customModule="Networking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,20 +89,6 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Czr-ht-h6J">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5hz-MZ-exs" userLabel="Get Image Button">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title=""/>
-                                <connections>
-                                    <action selector="getImagePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h5Q-jO-Mcw"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Download an Image" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISC-Cc-iCc">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="45"/>
-                                <color key="textColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="FFK-kr-1kj">
                                 <rect key="frame" x="197" y="438" width="20" height="20"/>
                             </activityIndicatorView>
@@ -40,32 +96,41 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ISC-Cc-iCc" firstAttribute="leading" secondItem="Czr-ht-h6J" secondAttribute="leading" id="0UG-iE-7BW"/>
                             <constraint firstItem="Czr-ht-h6J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7er-RN-Odh"/>
-                            <constraint firstItem="ISC-Cc-iCc" firstAttribute="trailing" secondItem="Czr-ht-h6J" secondAttribute="trailing" id="7fl-Mk-2sF"/>
-                            <constraint firstItem="5hz-MZ-exs" firstAttribute="leading" secondItem="Czr-ht-h6J" secondAttribute="leading" id="9Kp-uI-x0O"/>
                             <constraint firstItem="FFK-kr-1kj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DjW-uZ-xdH"/>
-                            <constraint firstItem="5hz-MZ-exs" firstAttribute="trailing" secondItem="Czr-ht-h6J" secondAttribute="trailing" id="N7C-Rs-SS0"/>
-                            <constraint firstItem="5hz-MZ-exs" firstAttribute="bottom" secondItem="Czr-ht-h6J" secondAttribute="bottom" id="cYD-Bo-rKO"/>
-                            <constraint firstItem="ISC-Cc-iCc" firstAttribute="top" secondItem="Czr-ht-h6J" secondAttribute="top" id="iB6-Vm-ERG"/>
-                            <constraint firstItem="ISC-Cc-iCc" firstAttribute="bottom" secondItem="Czr-ht-h6J" secondAttribute="bottom" id="mAW-cG-LKn"/>
                             <constraint firstAttribute="bottom" secondItem="Czr-ht-h6J" secondAttribute="bottom" id="mkQ-Gx-XHQ"/>
                             <constraint firstItem="FFK-kr-1kj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="p9B-bx-Nle"/>
-                            <constraint firstItem="5hz-MZ-exs" firstAttribute="top" secondItem="Czr-ht-h6J" secondAttribute="top" id="qLg-kH-WlV"/>
                             <constraint firstItem="Czr-ht-h6J" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="wAM-Jt-sVR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Czr-ht-h6J" secondAttribute="trailing" id="xIh-xv-wTU"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="oHQ-J7-gqv"/>
                     <connections>
                         <outlet property="activityIndicator" destination="FFK-kr-1kj" id="eX1-er-Ccd"/>
-                        <outlet property="getImageButton" destination="5hz-MZ-exs" id="6Uo-qj-dV7"/>
                         <outlet property="imageView" destination="Czr-ht-h6J" id="K9I-YT-ybx"/>
-                        <outlet property="label" destination="ISC-Cc-iCc" id="Oha-sW-XrG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="122" y="110"/>
+            <point key="canvasLocation" x="986" y="110"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CMs-E6-bpa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BYj-D5-QxE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7P2-QR-Uvb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cLf-hU-EwI" kind="relationship" relationship="rootViewController" id="gvo-Ih-j4e"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GcZ-KR-G2A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-628.98550724637687" y="109.82142857142857"/>
         </scene>
     </scenes>
     <resources>
