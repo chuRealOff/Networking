@@ -10,6 +10,8 @@ import UIKit
 class CoursesViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var courses = [Course]()
+    private var courseName: String?
+    private var courseUrl: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +63,14 @@ class CoursesViewController: UIViewController {
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let webViewController = segue.destination as! WebViewController
+        webViewController.selectedCourse = courseName
+        if let courseUrl = courseUrl {
+            webViewController.coursrURL = courseUrl
+        }
+    }
 }
 
 //MARK: Table view data source
@@ -74,6 +84,14 @@ extension CoursesViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CourseCell
         configureCell(cell, forIndexPath: indexPath)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let course = courses[indexPath.row]
+        courseName = course.name
+        courseUrl = course.link
+        
+        performSegue(withIdentifier: "course", sender: self)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

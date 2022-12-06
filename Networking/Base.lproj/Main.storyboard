@@ -180,7 +180,7 @@
                                             <outlet property="numberOfLessonsLabel" destination="VC3-bY-zo1" id="94Y-mW-9Av"/>
                                             <outlet property="numberOfTestsLabel" destination="FB5-Ez-pmd" id="cj1-p3-Bxk"/>
                                             <outlet property="picture" destination="emu-51-7HW" id="GfX-FZ-vHB"/>
-                                            <segue destination="JFm-B6-tuO" kind="show" id="9k2-oC-LjY"/>
+                                            <segue destination="JFm-B6-tuO" kind="show" identifier="course" id="9k2-oC-LjY"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
