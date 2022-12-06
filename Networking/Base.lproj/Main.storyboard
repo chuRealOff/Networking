@@ -84,7 +84,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="postRequest:" destination="cLf-hU-EwI" eventType="touchUpInside" id="5xk-3v-e7S"/>
                                     <segue destination="xpe-Ig-oUu" kind="show" id="ME7-13-zJB"/>
                                 </connections>
                             </button>
@@ -147,16 +146,14 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FB5-Ez-pmd">
-                                                    <rect key="frame" x="198" y="108" width="33" height="16"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FB5-Ez-pmd">
+                                                    <rect key="frame" x="195" y="108" width="194" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number of lessons" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VC3-bY-zo1">
-                                                    <rect key="frame" x="198" y="84" width="114" height="16"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of lessons" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VC3-bY-zo1">
+                                                    <rect key="frame" x="195" y="84" width="194" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -166,17 +163,22 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="3wb-LS-H7Y" secondAttribute="trailing" constant="5" id="60N-r1-rTf"/>
                                                 <constraint firstItem="emu-51-7HW" firstAttribute="leading" secondItem="Hg4-Xx-Au7" secondAttribute="leading" id="MMn-Vo-dIF"/>
                                                 <constraint firstItem="emu-51-7HW" firstAttribute="top" secondItem="Hg4-Xx-Au7" secondAttribute="top" id="MyS-QZ-9Y3"/>
+                                                <constraint firstItem="VC3-bY-zo1" firstAttribute="trailing" secondItem="3wb-LS-H7Y" secondAttribute="trailing" id="PPn-Oy-T05"/>
+                                                <constraint firstItem="FB5-Ez-pmd" firstAttribute="top" secondItem="VC3-bY-zo1" secondAttribute="bottom" constant="8" symbolic="YES" id="Pty-Li-CXm"/>
+                                                <constraint firstItem="FB5-Ez-pmd" firstAttribute="leading" secondItem="VC3-bY-zo1" secondAttribute="leading" id="TsE-Ai-O1L"/>
                                                 <constraint firstItem="3wb-LS-H7Y" firstAttribute="top" secondItem="Hg4-Xx-Au7" secondAttribute="topMargin" constant="5" id="eCN-8i-1cG"/>
+                                                <constraint firstItem="VC3-bY-zo1" firstAttribute="leading" secondItem="3wb-LS-H7Y" secondAttribute="leading" id="iWt-7r-eVj"/>
                                                 <constraint firstItem="3wb-LS-H7Y" firstAttribute="leading" secondItem="emu-51-7HW" secondAttribute="trailing" constant="5" id="qSj-4h-Sve"/>
+                                                <constraint firstItem="FB5-Ez-pmd" firstAttribute="trailing" secondItem="VC3-bY-zo1" secondAttribute="trailing" id="sUB-l0-Ilw"/>
                                                 <constraint firstAttribute="bottom" secondItem="emu-51-7HW" secondAttribute="bottom" id="u6a-SC-SDn"/>
+                                                <constraint firstItem="VC3-bY-zo1" firstAttribute="top" secondItem="3wb-LS-H7Y" secondAttribute="bottom" constant="45" id="xg5-bn-KeR"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="JFm-B6-tuO" kind="show" id="9k2-oC-LjY"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="xpe-Ig-oUu" id="VoP-qy-SjL"/>
-                                    <outlet property="delegate" destination="xpe-Ig-oUu" id="YdK-zh-5yx"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GhD-uX-fge"/>
@@ -196,6 +198,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dXW-tX-A2Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="963" y="481"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="1f6-VM-BzS">
+            <objects>
+                <viewController id="JFm-B6-tuO" customClass="WebViewController" customModule="Networking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Lz-2M-C8j">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XSc-aF-WkY">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="2Bz-y1-arc">
+                                <rect key="frame" x="45" y="88" width="324" height="4"/>
+                            </progressView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Pu7-Oq-tD4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XSc-aF-WkY" firstAttribute="leading" secondItem="Pu7-Oq-tD4" secondAttribute="leading" id="NBd-PB-hRW"/>
+                            <constraint firstItem="Pu7-Oq-tD4" firstAttribute="trailing" secondItem="XSc-aF-WkY" secondAttribute="trailing" id="PzC-HP-5z5"/>
+                            <constraint firstItem="Pu7-Oq-tD4" firstAttribute="bottom" secondItem="XSc-aF-WkY" secondAttribute="bottom" id="QbI-8v-ak8"/>
+                            <constraint firstItem="Pu7-Oq-tD4" firstAttribute="trailing" secondItem="2Bz-y1-arc" secondAttribute="trailing" constant="45" id="bgJ-ah-SDG"/>
+                            <constraint firstItem="2Bz-y1-arc" firstAttribute="leading" secondItem="Pu7-Oq-tD4" secondAttribute="leading" constant="45" id="dpF-Uj-Xg9"/>
+                            <constraint firstItem="XSc-aF-WkY" firstAttribute="top" secondItem="Pu7-Oq-tD4" secondAttribute="top" id="gNy-YN-dO1"/>
+                            <constraint firstItem="2Bz-y1-arc" firstAttribute="top" secondItem="Pu7-Oq-tD4" secondAttribute="top" id="l2D-R8-cLQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="t1h-XW-tty"/>
+                    <connections>
+                        <outlet property="progressView" destination="2Bz-y1-arc" id="VXU-IC-gpF"/>
+                        <outlet property="webView" destination="XSc-aF-WkY" id="84o-80-41g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1lo-0N-udk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1731.8840579710147" y="480.80357142857139"/>
         </scene>
         <!--Image View Controller-->
         <scene sceneID="tne-QT-ifu">
