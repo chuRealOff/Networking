@@ -127,7 +127,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="140" id="1nT-do-iIA">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="140" id="1nT-do-iIA" customClass="CourseCell" customModule="Networking" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="140"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1nT-do-iIA" id="Hg4-Xx-Au7">
@@ -140,20 +140,20 @@
                                                         <constraint firstAttribute="width" constant="190" id="2Ct-W4-yAB"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of Course" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3wb-LS-H7Y">
-                                                    <rect key="frame" x="195" y="16" width="194" height="23"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of Course" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3wb-LS-H7Y">
+                                                    <rect key="frame" x="195" y="16" width="194" height="22.5"/>
                                                     <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FB5-Ez-pmd">
-                                                    <rect key="frame" x="195" y="108" width="194" height="16"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of tests" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FB5-Ez-pmd">
+                                                    <rect key="frame" x="195" y="107.5" width="194" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of lessons" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VC3-bY-zo1">
-                                                    <rect key="frame" x="195" y="84" width="194" height="16"/>
+                                                    <rect key="frame" x="195" y="89" width="194" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -164,21 +164,30 @@
                                                 <constraint firstItem="emu-51-7HW" firstAttribute="leading" secondItem="Hg4-Xx-Au7" secondAttribute="leading" id="MMn-Vo-dIF"/>
                                                 <constraint firstItem="emu-51-7HW" firstAttribute="top" secondItem="Hg4-Xx-Au7" secondAttribute="top" id="MyS-QZ-9Y3"/>
                                                 <constraint firstItem="VC3-bY-zo1" firstAttribute="trailing" secondItem="3wb-LS-H7Y" secondAttribute="trailing" id="PPn-Oy-T05"/>
-                                                <constraint firstItem="FB5-Ez-pmd" firstAttribute="top" secondItem="VC3-bY-zo1" secondAttribute="bottom" constant="8" symbolic="YES" id="Pty-Li-CXm"/>
+                                                <constraint firstItem="FB5-Ez-pmd" firstAttribute="top" secondItem="VC3-bY-zo1" secondAttribute="bottom" constant="2.5" id="Pty-Li-CXm"/>
                                                 <constraint firstItem="FB5-Ez-pmd" firstAttribute="leading" secondItem="VC3-bY-zo1" secondAttribute="leading" id="TsE-Ai-O1L"/>
                                                 <constraint firstItem="3wb-LS-H7Y" firstAttribute="top" secondItem="Hg4-Xx-Au7" secondAttribute="topMargin" constant="5" id="eCN-8i-1cG"/>
                                                 <constraint firstItem="VC3-bY-zo1" firstAttribute="leading" secondItem="3wb-LS-H7Y" secondAttribute="leading" id="iWt-7r-eVj"/>
                                                 <constraint firstItem="3wb-LS-H7Y" firstAttribute="leading" secondItem="emu-51-7HW" secondAttribute="trailing" constant="5" id="qSj-4h-Sve"/>
                                                 <constraint firstItem="FB5-Ez-pmd" firstAttribute="trailing" secondItem="VC3-bY-zo1" secondAttribute="trailing" id="sUB-l0-Ilw"/>
                                                 <constraint firstAttribute="bottom" secondItem="emu-51-7HW" secondAttribute="bottom" id="u6a-SC-SDn"/>
-                                                <constraint firstItem="VC3-bY-zo1" firstAttribute="top" secondItem="3wb-LS-H7Y" secondAttribute="bottom" constant="45" id="xg5-bn-KeR"/>
+                                                <constraint firstAttribute="bottom" secondItem="FB5-Ez-pmd" secondAttribute="bottom" constant="16.5" id="uSx-DZ-mCj"/>
+                                                <constraint firstItem="VC3-bY-zo1" firstAttribute="top" relation="lessThanOrEqual" secondItem="3wb-LS-H7Y" secondAttribute="bottom" constant="50.5" id="xg5-bn-KeR"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="courseNameLabel" destination="3wb-LS-H7Y" id="DJM-2F-pnN"/>
+                                            <outlet property="numberOfLessonsLabel" destination="VC3-bY-zo1" id="94Y-mW-9Av"/>
+                                            <outlet property="numberOfTestsLabel" destination="FB5-Ez-pmd" id="cj1-p3-Bxk"/>
+                                            <outlet property="picture" destination="emu-51-7HW" id="GfX-FZ-vHB"/>
                                             <segue destination="JFm-B6-tuO" kind="show" id="9k2-oC-LjY"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="xpe-Ig-oUu" id="f3O-qd-Qvh"/>
+                                    <outlet property="delegate" destination="xpe-Ig-oUu" id="QNF-9A-Qqm"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GhD-uX-fge"/>

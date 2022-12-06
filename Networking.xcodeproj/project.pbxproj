@@ -17,6 +17,7 @@
 		ABFFC6A7293F396800D79E91 /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFFC6A6293F396800D79E91 /* CoursesViewController.swift */; };
 		ABFFC6A9293F416700D79E91 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFFC6A8293F416700D79E91 /* WebViewController.swift */; };
 		ABFFC6AB293F48AE00D79E91 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFFC6AA293F48AE00D79E91 /* Course.swift */; };
+		ABFFC6B0293F6B3000D79E91 /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFFC6AF293F6B3000D79E91 /* CourseCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		ABFFC6A6293F396800D79E91 /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
 		ABFFC6A8293F416700D79E91 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		ABFFC6AA293F48AE00D79E91 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		ABFFC6AF293F6B3000D79E91 /* CourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				ABFFC6AA293F48AE00D79E91 /* Course.swift */,
+				ABFFC6AF293F6B3000D79E91 /* CourseCell.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 				ABFFC6AB293F48AE00D79E91 /* Course.swift in Sources */,
 				ABFFC6A9293F416700D79E91 /* WebViewController.swift in Sources */,
 				AB4FA970293E2BD100BE5345 /* AppDelegate.swift in Sources */,
+				ABFFC6B0293F6B3000D79E91 /* CourseCell.swift in Sources */,
 				AB4FA984293E4AAD00BE5345 /* ViewController.swift in Sources */,
 				AB4FA972293E2BD100BE5345 /* SceneDelegate.swift in Sources */,
 				ABFFC6A7293F396800D79E91 /* CoursesViewController.swift in Sources */,
