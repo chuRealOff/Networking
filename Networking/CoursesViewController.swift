@@ -91,7 +91,7 @@ extension CoursesViewController: UITableViewDataSource, UITableViewDelegate {
         courseName = course.name
         courseUrl = course.link
         
-        performSegue(withIdentifier: "course", sender: self)
+        performSegue(withIdentifier: "particularCourse", sender: self)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
