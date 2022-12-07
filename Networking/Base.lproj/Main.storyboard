@@ -180,7 +180,6 @@
                                             <outlet property="numberOfLessonsLabel" destination="VC3-bY-zo1" id="94Y-mW-9Av"/>
                                             <outlet property="numberOfTestsLabel" destination="FB5-Ez-pmd" id="cj1-p3-Bxk"/>
                                             <outlet property="picture" destination="emu-51-7HW" id="GfX-FZ-vHB"/>
-                                            <segue destination="JFm-B6-tuO" kind="show" identifier="course" id="9k2-oC-LjY"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -202,6 +201,7 @@
                     <navigationItem key="navigationItem" id="HtT-Su-Dfx"/>
                     <connections>
                         <outlet property="tableView" destination="sVk-Rz-SBs" id="WNP-sT-6bG"/>
+                        <segue destination="JFm-B6-tuO" kind="show" identifier="particularCourse" id="Bvv-01-fhv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dXW-tX-A2Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
