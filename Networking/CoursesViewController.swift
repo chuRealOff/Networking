@@ -7,12 +7,14 @@
 
 import UIKit
 
+private let jsonUrlString = "https://swiftbook.ru//wp-content/uploads/api/api_courses"
+
 class CoursesViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var courses = [Course]()
     private var courseName: String?
     private var courseUrl: String?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Courses"
@@ -21,26 +23,12 @@ class CoursesViewController: UIViewController {
     }
     
     func fetchData() {
-        let jsonUrlString = "https://swiftbook.ru//wp-content/uploads/api/api_courses"
-        guard let url = URL(string: jsonUrlString) else { return }
-        
-        let session = URLSession.shared
-        session.dataTask(with: url) { data, response, error in
-            guard let data = data else { return }
-            
-            do {
-                let jsonDecoder = JSONDecoder()
-                jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
-                self.courses = try jsonDecoder.decode([Course].self, from: data)
-               
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
-                
-            } catch let error {
-                print("Error serialization json", error)
+        NetworkManager.fetchCollectionViewData(urlString: jsonUrlString) { courses in
+            self.courses = courses
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
             }
-        }.resume()
+        }
     }
     
     private func configureCell(_ cell: CourseCell, forIndexPath indexPath: IndexPath) {
@@ -55,7 +43,7 @@ class CoursesViewController: UIViewController {
             DispatchQueue.global().async {
                 guard let imageUrl = URL(string: course.imageUrl) else { return }
                 guard let imageData = try? Data(contentsOf: imageUrl) else { return }
-   
+                
                 DispatchQueue.main.async {
                     cell.picture.image = UIImage(data: imageData)
                     

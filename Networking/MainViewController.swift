@@ -7,8 +7,10 @@
 
 import UIKit
 
+private let url = "https://jsonplaceholder.typicode.com/posts"
+
 class MainViewController: UICollectionViewController {
-    let actions = ["Load Image", "GET", "POST", "Our Courses", "Upload Image"]
+    let actions = ["Download Image", "GET", "POST", "Our Courses", "Upload Image"]
 
     
 
@@ -25,34 +27,25 @@ class MainViewController: UICollectionViewController {
     }
 
     // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let action = actions[indexPath.row]
+        
+        switch action {
+        case "Download Image":
+            performSegue(withIdentifier: "showImage", sender: self)
+        case "GET":
+            NetworkManager.getRequest(urlString: url)
+        case "POST":
+            NetworkManager.postRequest(urlString: url)
+        case "Our Courses":
+            performSegue(withIdentifier: "showCourses", sender: self)
+        case "Upload Image":
+             print("Upload Image")
+        default:
+            break
+
+        }
     }
-    */
 
 }

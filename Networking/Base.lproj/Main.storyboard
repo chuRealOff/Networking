@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--Controls-->
         <scene sceneID="Wzu-3b-2qh">
             <objects>
                 <collectionViewController id="yzW-9l-zqB" customClass="MainViewController" customModule="Networking" customModuleProvider="target" sceneMemberID="viewController">
@@ -65,7 +65,7 @@
                             <outlet property="delegate" destination="yzW-9l-zqB" id="Lmx-8V-yLE"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="x2I-bg-rnp"/>
+                    <navigationItem key="navigationItem" title="Controls" id="igv-4r-CPp"/>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="showImage" id="sRa-O4-A8f"/>
                         <segue destination="xpe-Ig-oUu" kind="show" identifier="showCourses" id="c37-eA-J6r"/>

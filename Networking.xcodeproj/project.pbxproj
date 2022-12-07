@@ -13,9 +13,9 @@
 		AB4FA977293E2BD100BE5345 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB4FA975293E2BD100BE5345 /* Main.storyboard */; };
 		AB4FA979293E2BD400BE5345 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB4FA978293E2BD400BE5345 /* Assets.xcassets */; };
 		AB4FA97C293E2BD400BE5345 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB4FA97A293E2BD400BE5345 /* LaunchScreen.storyboard */; };
-		AB4FA984293E4AAD00BE5345 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4FA983293E4AAD00BE5345 /* ViewController.swift */; };
 		AB5854A12940D94D004F075E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5854A02940D94D004F075E /* MainViewController.swift */; };
 		AB5854A32940D977004F075E /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5854A22940D977004F075E /* CollectionViewCell.swift */; };
+		AB5854A52940E228004F075E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5854A42940E228004F075E /* NetworkManager.swift */; };
 		ABFFC6A7293F396800D79E91 /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFFC6A6293F396800D79E91 /* CoursesViewController.swift */; };
 		ABFFC6A9293F416700D79E91 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFFC6A8293F416700D79E91 /* WebViewController.swift */; };
 		ABFFC6AB293F48AE00D79E91 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFFC6AA293F48AE00D79E91 /* Course.swift */; };
@@ -31,9 +31,9 @@
 		AB4FA978293E2BD400BE5345 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB4FA97B293E2BD400BE5345 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB4FA97D293E2BD400BE5345 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AB4FA983293E4AAD00BE5345 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AB5854A02940D94D004F075E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AB5854A22940D977004F075E /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		AB5854A42940E228004F075E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		ABFFC6A6293F396800D79E91 /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
 		ABFFC6A8293F416700D79E91 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		ABFFC6AA293F48AE00D79E91 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
@@ -72,7 +72,7 @@
 			children = (
 				AB4FA96F293E2BD100BE5345 /* AppDelegate.swift */,
 				AB4FA971293E2BD100BE5345 /* SceneDelegate.swift */,
-				AB4FA983293E4AAD00BE5345 /* ViewController.swift */,
+				AB5854A42940E228004F075E /* NetworkManager.swift */,
 				AB5854A02940D94D004F075E /* MainViewController.swift */,
 				AB4FA973293E2BD100BE5345 /* ImageViewController.swift */,
 				ABFFC6A6293F396800D79E91 /* CoursesViewController.swift */,
@@ -171,9 +171,9 @@
 				AB4FA974293E2BD100BE5345 /* ImageViewController.swift in Sources */,
 				ABFFC6AB293F48AE00D79E91 /* Course.swift in Sources */,
 				ABFFC6A9293F416700D79E91 /* WebViewController.swift in Sources */,
+				AB5854A52940E228004F075E /* NetworkManager.swift in Sources */,
 				AB4FA970293E2BD100BE5345 /* AppDelegate.swift in Sources */,
 				ABFFC6B0293F6B3000D79E91 /* CourseCell.swift in Sources */,
-				AB4FA984293E4AAD00BE5345 /* ViewController.swift in Sources */,
 				AB5854A12940D94D004F075E /* MainViewController.swift in Sources */,
 				AB4FA972293E2BD100BE5345 /* SceneDelegate.swift in Sources */,
 				ABFFC6A7293F396800D79E91 /* CoursesViewController.swift in Sources */,
