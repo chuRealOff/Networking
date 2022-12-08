@@ -16,6 +16,7 @@
 		AB5854A12940D94D004F075E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5854A02940D94D004F075E /* MainViewController.swift */; };
 		AB5854A32940D977004F075E /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5854A22940D977004F075E /* CollectionViewCell.swift */; };
 		AB5854A52940E228004F075E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5854A42940E228004F075E /* NetworkManager.swift */; };
+		AB5854A82941D900004F075E /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5854A72941D900004F075E /* File.swift */; };
 		ABFFC6A7293F396800D79E91 /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFFC6A6293F396800D79E91 /* CoursesViewController.swift */; };
 		ABFFC6A9293F416700D79E91 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFFC6A8293F416700D79E91 /* WebViewController.swift */; };
 		ABFFC6AB293F48AE00D79E91 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFFC6AA293F48AE00D79E91 /* Course.swift */; };
@@ -34,6 +35,7 @@
 		AB5854A02940D94D004F075E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AB5854A22940D977004F075E /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		AB5854A42940E228004F075E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		AB5854A72941D900004F075E /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		ABFFC6A6293F396800D79E91 /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
 		ABFFC6A8293F416700D79E91 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		ABFFC6AA293F48AE00D79E91 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
@@ -78,12 +80,21 @@
 				ABFFC6A6293F396800D79E91 /* CoursesViewController.swift */,
 				ABFFC6A8293F416700D79E91 /* WebViewController.swift */,
 				ABFFC6AC293F48B400D79E91 /* Models */,
+				AB5854A62941D8E3004F075E /* MainVCActions */,
 				AB4FA975293E2BD100BE5345 /* Main.storyboard */,
 				AB4FA978293E2BD400BE5345 /* Assets.xcassets */,
 				AB4FA97A293E2BD400BE5345 /* LaunchScreen.storyboard */,
 				AB4FA97D293E2BD400BE5345 /* Info.plist */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		AB5854A62941D8E3004F075E /* MainVCActions */ = {
+			isa = PBXGroup;
+			children = (
+				AB5854A72941D900004F075E /* File.swift */,
+			);
+			path = MainVCActions;
 			sourceTree = "<group>";
 		};
 		ABFFC6AC293F48B400D79E91 /* Models */ = {
@@ -176,6 +187,7 @@
 				ABFFC6B0293F6B3000D79E91 /* CourseCell.swift in Sources */,
 				AB5854A12940D94D004F075E /* MainViewController.swift in Sources */,
 				AB4FA972293E2BD100BE5345 /* SceneDelegate.swift in Sources */,
+				AB5854A82941D900004F075E /* File.swift in Sources */,
 				ABFFC6A7293F396800D79E91 /* CoursesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

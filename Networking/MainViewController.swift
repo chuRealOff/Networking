@@ -10,7 +10,8 @@ import UIKit
 private let url = "https://jsonplaceholder.typicode.com/posts"
 
 class MainViewController: UICollectionViewController {
-    let actions = ["Download Image", "GET", "POST", "Our Courses", "Upload Image"]
+//    let actions = ["Download Image", "GET", "POST", "Our Courses", "Upload Image"]
+    let actions = Actions.allCases
 
     
 
@@ -22,7 +23,7 @@ class MainViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
-        cell.label.text = actions[indexPath.row]
+        cell.label.text = actions[indexPath.row].rawValue
         return cell
     }
 
@@ -32,19 +33,16 @@ class MainViewController: UICollectionViewController {
         let action = actions[indexPath.row]
         
         switch action {
-        case "Download Image":
+        case .downloadImage:
             performSegue(withIdentifier: "showImage", sender: self)
-        case "GET":
+        case .getRequest:
             NetworkManager.getRequest(urlString: url)
-        case "POST":
+        case .postRequest:
             NetworkManager.postRequest(urlString: url)
-        case "Our Courses":
+        case .ourCourses:
             performSegue(withIdentifier: "showCourses", sender: self)
-        case "Upload Image":
+        case .uploadImage:
              print("Upload Image")
-        default:
-            break
-
         }
     }
 
